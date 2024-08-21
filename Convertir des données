@@ -1,0 +1,42 @@
+using System.Drawing;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace Exercices4_conversion_de_type_et_casting
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Objectif
+            //Convertir des variables entre différents types de données.
+            //Utiliser le cast explicite pour effectuer des conversions qui ne sont pas automatiques.
+
+            //Implicit Casting (automatically) - converting a smaller type to a larger type size
+            //char -> int -> long -> float -> double
+
+            //Explicit Casting(manually) - converting a larger type to a smaller size type
+            //double -> float -> long -> int -> char
+
+            int entier = 123;
+            double decimalVersDouble = 456.78;
+            float decimalVersFloat = 12.34F;
+            string texte = "789";
+
+            // 1. Conversion implicite (automatique)
+            double nbDouble = entier; // int vers double (implicite)
+
+            // 2. Conversion explicite (cast) entre types numériques
+            int nbEntier = (int)decimalVersDouble; // double vers int (explicite, perd de la précision)
+
+            // 3. Conversion entre types de chaînes et numériques
+            int nombreDepuisTexte = int.Parse(texte); // string vers int (parsing)
+
+            // 4. Conversion explicite avec float et double
+            double conversionDepuisFloat = (float)decimalVersFloat; // float vers double (explicite)
+
+
+
+
+        }
+    }
+}
